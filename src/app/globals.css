@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --color-wx-dark: #1A1225;
+  --color-wx-dark-soft: #241a33;
+  --color-wx-purple: #7C3AED;
+  --color-wx-pink: #EC4899;
+  --color-wx-bg: #F5F3FA;
+  --color-wx-ink: #1A1A1A;
+  --color-wx-muted: #9CA3AF;
+  --color-wx-line: #E7E3F0;
+
+  --font-sans: var(--font-raleway), ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --wx-grad: linear-gradient(90deg, #7C3AED 0%, #EC4899 100%);
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--color-wx-bg);
+  color: var(--color-wx-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Gradient fill for CTAs, badges, accents */
+.wx-gradient {
+  background-image: var(--wx-grad);
+}
+
+/* Gradient text — used for the Wellx price */
+.wx-gradient-text {
+  background-image: var(--wx-grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Thin gradient rule */
+.wx-gradient-rule {
+  background-image: var(--wx-grad);
+  height: 3px;
+}
+
+.wx-focus:focus-visible {
+  outline: 2px solid var(--color-wx-purple);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
